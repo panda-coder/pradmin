@@ -1,0 +1,87 @@
+
+
+// Bootstrap library
+@import 'bootstrap/scss/bootstrap';
+
+@import 'variables';
+@import 'mixins';
+
+@import 'sidebar';
+
+html {
+  height: 100%;
+}
+
+body, #root {
+  height: 100%;
+  min-height: 100%;
+}
+
+#main-wrapper{
+  height: 100%;
+  min-height: 100%;
+
+  &.toggled #sidebar {
+    margin-left: 0;
+  }
+}
+
+#content-wrapper { 
+  width: 100%;
+
+  .content-dynamic {
+    padding: 1em;
+  }
+  
+}
+
+.App {
+  text-align: center;
+}
+
+body.bg-blue{
+  background-color: rgba(73,155,234,1);
+  background: rgba(73,155,234,1);
+  background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
+  background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
